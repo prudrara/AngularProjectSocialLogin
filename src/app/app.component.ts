@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import 'rxjs/add/observable/of';
+import {
+  AuthService,
+  FacebookLoginProvider,
+  GoogleLoginProvider
+} from 'angular5-social-login';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor( private socialAuthService: AuthService ) {}
+
+  public socialSignIn(socialPlatform : string) {
+    let socialPlatformProvider;
+    if(socialPlatform == "google"){
+      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    }
+
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData) => {
+        console.log(socialPlatform+" sign in data : " , userData);
+        // Now sign-in with userData
+
+
+      }
+    );
+  }
+
   title = 'app';
-}
+}1
