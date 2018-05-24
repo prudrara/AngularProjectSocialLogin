@@ -8,7 +8,7 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-  
+
 } from "angular5-social-login";
 
 export function getAuthServiceConfigs() {
@@ -16,7 +16,7 @@ export function getAuthServiceConfigs() {
     [
       {
         id: GoogleLoginProvider.PROVIDER_ID,
-        provider: new GoogleLoginProvider("50573442860-6lf1eme9lnsjra8vl8mil36qn2ecm959.apps.googleusercontent.com")
+        provider: new GoogleLoginProvider("1098882861727-1cqtksb0rsbktr43ud0oekaufacahn5n.apps.googleusercontent.com")
       },
     ]
   )
