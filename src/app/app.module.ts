@@ -8,7 +8,7 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-  FacebookLoginProvider,
+  
 } from "angular5-social-login";
 
 export function getAuthServiceConfigs() {
